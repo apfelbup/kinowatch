@@ -1,0 +1,42 @@
+@import "../../../styles/styles.scss";
+
+.swiper-prev,
+.swiper-next{
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    z-index: $z-index-small;
+
+    font-size: $title-font-size-large;
+    width: 50px;
+    height: 100px;
+
+    color: $light;
+
+    transition: all $transition-duration-fast;
+    
+    border-radius: $border-radius-medium;
+    backdrop-filter: blur(100px);
+
+    &:hover{
+        background-color: $grey;
+    }
+
+    &:active{
+        opacity: 0.7;
+    }
+}
+
+.swiper-button-disabled{
+    display: none;
+}
+
+.swiper-prev{
+    left: 15px;
+}
+
+.swiper-next{
+    right: 15px;
+}
+
+.swiper-backface-hidden .swiper-slide  { max-width: 250px; height: 400px; }
