@@ -1,0 +1,23 @@
+@import "../../styles/styles.scss";
+
+.footer{
+    flex-shrink: 0;
+
+    .wrapper{
+        @include wrapper;
+
+        .title{
+            font-size: $title-font-size-large;
+            margin-bottom: 20px;
+        }
+
+        .content{
+            font-weight: $font-weight-medium;
+            line-height: 20px;
+
+            max-width: 650px;
+
+            color: $grey;
+        }
+    }
+}

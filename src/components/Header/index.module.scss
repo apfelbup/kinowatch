@@ -1,0 +1,36 @@
+@import "../../styles/styles.scss";
+
+.header{
+    position: sticky;
+    top: 0;
+    z-index: $z-index-big;
+
+    padding: 10px 0;
+
+
+    backdrop-filter: blur(70px);
+
+    .wrapper{
+        @include wrapper;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navigation{
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+        
+        .links{
+            display: flex;
+            gap: 20px;
+
+            a{
+                @include link;
+            }
+        }
+    }
+
+}
