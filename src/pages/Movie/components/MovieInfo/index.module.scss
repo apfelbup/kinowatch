@@ -1,0 +1,22 @@
+@import "../../../../styles/styles.scss";
+
+.movieInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+    h4{
+        font-size: $text-font-size-large;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+
+    .description{
+        font-size: $text-font-size-medium;
+        max-width: 50vw;
+
+        p{
+            line-height: 28px;
+        }
+    }
+}

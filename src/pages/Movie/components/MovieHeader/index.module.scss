@@ -1,0 +1,65 @@
+@import "../../../../styles/styles.scss";
+
+
+.wrapper{
+    @include wrapper;
+}
+
+.movieHeader{
+        position: relative;
+        height: 80vh;
+
+        margin-bottom: 40px;
+
+        .info{
+            position: absolute;
+            bottom: 20%;
+            z-index: $z-index-medium;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .logo{
+                font-weight: $font-weight-large;
+                font-size: $title-font-size-huge;
+                max-width: 400px;
+
+                color: $light;
+            }
+
+            .details{
+                font-weight: $font-weight-medium;
+                font-size: $text-font-size-medium;
+
+                display: flex;
+                align-items: baseline;
+                gap: 10px;
+
+                .rating{
+                    font-weight: $font-weight-large;
+                    font-size: $text-font-size-huge;
+                }
+
+                .year{
+                    color: $grey;
+                }
+            }
+
+            .buttons{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+    
+                .wathFilm{
+                    @include button;
+    
+                    background: $accent-gradient;
+                }
+    
+                .wathTrailer{
+                    @include button;
+                }
+            }
+        }
+}

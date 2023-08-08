@@ -1,0 +1,9 @@
+@import "../../styles/styles.scss";
+
+.movie{
+
+    .wrapper{
+        @include wrapper;
+    }
+
+}
