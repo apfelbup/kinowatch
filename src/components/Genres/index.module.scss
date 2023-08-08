@@ -1,0 +1,17 @@
+@import "../../styles/styles.scss";
+
+.genres{
+    display: flex;
+    gap: 5px;
+    
+    margin: 0;
+    padding: 0;
+
+    li{
+        a{
+            @include button;
+            padding: 10px;
+            border: 1px solid $light;
+        }
+    }
+}

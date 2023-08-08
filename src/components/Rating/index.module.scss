@@ -1,0 +1,9 @@
+@import "../../styles/styles.scss";
+
+.rating{
+        font-weight: $font-weight-large;
+        font-size: $text-font-size-medium;
+
+        padding: 5px 10px;
+        border-radius: $border-radius-medium;
+}
