@@ -1,0 +1,9 @@
+@import "../../styles/styles.scss";
+
+.films{
+    position: relative;
+}
+
+.wrapper{
+    @include wrapper;
+}
