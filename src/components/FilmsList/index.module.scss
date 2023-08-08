@@ -1,0 +1,20 @@
+@import "../../styles/styles.scss";
+
+
+.loading{
+
+    font-size: $title-font-size-huge;
+    font-weight: $font-weight-large;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50vh;
+}
+
+.filmList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
