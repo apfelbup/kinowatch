@@ -1,0 +1,54 @@
+
+
+@mixin wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+@mixin link {
+    font-weight: $font-weight-medium;
+    font-size: $text-font-size-large;
+
+    color: $grey;
+
+    transition: all $transition-duration-slow;
+
+    &:hover{
+        color: $light;
+    }
+
+    &:active{
+        opacity: .3;
+    }
+}
+
+
+@mixin button{
+    font-weight: $font-weight-large;
+
+    transition: opacity $transition-duration-fast;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: fit-content;
+
+    padding: 15px;
+
+    border-radius: $border-radius-medium;
+
+    color: $light;
+
+    backdrop-filter: blur(70px);
+
+    &:hover{
+        opacity: 0.8;
+    };
+
+    &:active{
+        opacity: 0.5;
+    }
+}

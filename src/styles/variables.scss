@@ -1,0 +1,73 @@
+
+// colors
+
+$dark-color: #0D0808;
+$light: #fff; 
+$grey: #969696;
+$accent-color: #AC2727;
+
+$background-color: $dark-color;
+$text-color-primary: $light;
+$text-color-secondary: $grey;
+
+
+//font-size
+
+$font-size-normal: 16px;
+
+$font-size-xxs: 12px;
+$font-size-xs: 14px;
+$font-size-s: 18px;
+$font-size-m: 22px;
+$font-size-l: 24px;
+$font-size-xl: 28px;
+$font-size-xxl: 32px;
+$font-size-xxxl: 48px;
+
+$title-font-size-minimal: $font-size-s;
+$title-font-size-small: $font-size-m;
+$title-font-size-medium: $font-size-l;
+$title-font-size-large: $font-size-xxl;
+$title-font-size-huge: $font-size-xxxl;
+
+$text-font-size-minimal: $font-size-xxs;
+$text-font-size-small: $font-size-xs;
+$text-font-size-medium: $font-size-s;
+$text-font-size-large: $font-size-m;
+$text-font-size-huge: $font-size-l;
+
+//font-weight
+
+$font-weight-small: 400;
+$font-weight-medium: 500;
+$font-weight-large: 600;
+
+//breackpoints
+
+$screen-mobile: "(max-width:470px)";
+$screen-tablet:"(max-width:768px)";
+$screen-desktop: "(max-width:1024px)"; 
+$screen-desktop-large: "(max-width:1440px)";
+
+
+//animation
+
+$transition-duration-fast: 0.3s;
+$transition-duration-slow: 0.5s;
+
+$transition-color: color $transition-duration-fast;
+$transition-background: background $transition-duration-slow;
+
+//border
+
+$border-radius-medium: 10px;
+
+//z-index
+
+$z-index-small: 10;
+$z-index-medium: 30;
+$z-index-big: 50;
+
+//gradients
+
+$accent-gradient: linear-gradient(126deg, rgba(172,39,39,1) 39%, rgba(164,121,59,1) 100%);
