@@ -1,0 +1,43 @@
+@import "../../../styles/styles.scss";
+
+.promoBlock{
+    width: 100%;
+    height: 80vh;
+
+    overflow: hidden;    
+    border-radius: $border-radius-medium;
+
+    @media #{$screen-tablet}{
+        height: 70vh;
+    }
+
+    @media #{$screen-mobile}{
+        height: 350px;
+    }
+
+    .info{
+        position: absolute;
+        z-index: $z-index-medium;
+        bottom: 30px;
+        left: 30px;
+
+        width: 100%;
+
+        @media #{$screen-mobile}{
+            bottom: 15px;
+            left: 15px;
+        }
+    
+    }
+
+    .imgContainer{
+        height: 100%;
+        width: 100%;
+
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
