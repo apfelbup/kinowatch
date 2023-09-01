@@ -1,6 +1,6 @@
 
 
-export const convertMovieType = (type:any) => {
+export const convertMovieType = (type:string) => {
     switch (type) {
         case 'film':
             return 'фильм';

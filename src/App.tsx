@@ -22,8 +22,8 @@ function App() {
           <Route path='/cartoons' element={<Cartoons/>}/>
           <Route path='/films' element={<Films/>}/>
           <Route path='/series' element={<Series/>}/>
-          <Route path='/movie/:id' element={<Movie/>}/>
-          <Route path='/person' element={<Person/>}/>
+          <Route path='/film/:id' element={<Movie/>}/>
+          <Route path='/name/:id' element={<Person/>}/>
 
           <Route path="*" element={<NotFound/>}/>
       </Routes>

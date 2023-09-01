@@ -16,16 +16,34 @@ export type logo = {
         url:string
 }
 
-export type persons = {
+export type person = {
+        id:number,
         name:string,
-        photo: string
+        photo:string,
+        enName:string,
+        sex:string,
+        age:string,
+        profession:any[],
+        movies:any[],
+        facts:any[]
+
+}
+
+export type persons = {
+        name?:string,
+        photo?: string,
+        id?:number
 }
 
 export type rating = {
-        filmCritics: number,
+        filmCritics?: number,
         imdb: number,
         kp : number,
-        russianFilmCritics: number
+        russianFilmCritics?: number
+}
+
+export type videos = {
+        trailers: any[]
 }
 
 export interface filmData { 
@@ -36,12 +54,12 @@ export interface filmData {
         enName?:string | null,
         type:string,
         rating: rating,
-        genres: genres[],
-        movieLength: number | null,
+        genres: any,
+        movieLength: number,
         logo?: logo,
-        backdrop?: backdrop,
-        countries: countries[],
-        persons:persons[]
+        backdrop: backdrop,
+        countries?: countries[],
+        persons?:persons[],
+        videos?: videos[]
+};
 
-
-}

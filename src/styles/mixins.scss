@@ -3,7 +3,7 @@
 @mixin wrapper {
     max-width: 1500px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 15px; 
 }
 
 
@@ -25,7 +25,7 @@
 }
 
 
-@mixin button{
+@mixin button($gradient:false){
     font-weight: $font-weight-large;
 
     transition: opacity $transition-duration-fast;
@@ -44,6 +44,10 @@
 
     backdrop-filter: blur(70px);
 
+    @if $gradient {
+        background: $accent-gradient;
+    }
+
     &:hover{
         opacity: 0.8;
     };
@@ -51,4 +55,24 @@
     &:active{
         opacity: 0.5;
     }
+}
+
+@mixin popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z-index-big;
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0,0,0,0.7);
+}
+
+@mixin input {
+
+    width: 100%;
+
+    padding: 10px;
+
+    border-radius: $border-radius-medium;
 }
