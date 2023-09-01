@@ -1,21 +1,37 @@
 import styles from "./index.module.scss";
 
 import {AiFillCaretRight} from 'react-icons/ai';
-import { useAppSelector } from "../../../../hooks/reduxhooks"; 
 import { convertHoursToMinutes } from "../../../../utils/helpers/convertHoursToMinutes/convertHoursToMinutes";
 import { convertMovieType } from "../../../../utils/helpers/convertMovieType/convertMovieType";
 
 import Backdrop from "../../../../components/Backdrop";
 import Genres from "../../../../components/Genres";
 import Rating from "../../../../components/Rating";
+import { useState } from "react";
+import TrailerPopup from "../../../../components/TrailerPopup";
+import { useDisableBodyScroll } from "../../../../hooks/useDisableScroll";
+import { filmData } from "../../../../utils/interfaces/data";
 
 
 
+interface IMovieHeader {
+    data:filmData[]
+}
 
-const MovieHeader = () => {
-    const { id, year, name, type, rating, movieLength, backdrop, logo, genres, countries } = useAppSelector(state => state.movieReducer.activeAccordion.movie);
+const MovieHeader = ({data}:IMovieHeader) => {
+    const { id, year, name, type, rating, movieLength, backdrop, logo, genres, countries, videos } = data[0];
     const movieType = convertMovieType(type);
     const {hours, minutes} = convertHoursToMinutes(movieLength);
+
+    const [popup, setPoppup] = useState(false);
+
+    useDisableBodyScroll(popup);
+ 
+
+    const trailerHandler = () => {
+        setPoppup(!popup)
+    }
+
 
     return(
             <header className={styles.movieHeader}>
@@ -31,11 +47,13 @@ const MovieHeader = () => {
                         {year && <span className={styles.year}>{year}г.</span>}
                     </div>
                     <div className={styles.buttons}>
-                        <button className={styles.wathFilm}><AiFillCaretRight/>Смотреть фильм</button>
-                        <button className={styles.wathTrailer}>Трейлер</button>
+                        <button onClick={trailerHandler} className={styles.wathFilm}><AiFillCaretRight/>Смотреть фильм</button>
+                        <button onClick={trailerHandler} className={styles.wathTrailer}>Трейлер</button>
                     </div>
                 </div>
                 </div>
+
+                {popup && <TrailerPopup trailer={videos} handler={trailerHandler}/>}
                 <Backdrop id={id} backdrop={backdrop}/>
             </header>
     )

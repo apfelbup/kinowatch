@@ -1,14 +1,16 @@
 import styles from "./index.module.scss";
 
-import { useAppSelector } from "../../../../hooks/reduxhooks";
-
 import Persons from "../../../../components/Persons";
+import { filmData } from "../../../../utils/interfaces/data";
 
 
 
+interface IMovieInfo {
+    data: filmData[]
+}
 
-const MovieInfo = () => {
-    const {description,persons} = useAppSelector(state => state.movieReducer.activeAccordion.movie);
+const MovieInfo = ({data}:IMovieInfo) => {
+    const {description, persons} = data[0];
 
     return(
         <div className={styles.movieInfo}>
@@ -19,7 +21,7 @@ const MovieInfo = () => {
             </div>
             <div className={styles.persons}>
                 <h4>Актеры и сценаристы</h4>
-                <Persons persons={persons}/>
+                <Persons persons={persons!}/>
             </div>
         </div>
     )

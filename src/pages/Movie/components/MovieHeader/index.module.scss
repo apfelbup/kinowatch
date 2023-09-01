@@ -7,9 +7,13 @@
 
 .movieHeader{
         position: relative;
-        height: 80vh;
+        height: 85vh;
 
         margin-bottom: 40px;
+
+        @media #{$screen-tablet}{
+            height: 450px;
+        }
 
         .info{
             position: absolute;
@@ -20,12 +24,20 @@
             flex-direction: column;
             gap: 20px;
 
+            @media #{$screen-desktop}{
+                bottom: 10%;
+            }
+
             .logo{
                 font-weight: $font-weight-large;
                 font-size: $title-font-size-huge;
                 max-width: 400px;
 
                 color: $light;
+
+                @media #{$screen-mobile}{
+                    max-width: 200px;
+                }
             }
 
             .details{
@@ -35,6 +47,10 @@
                 display: flex;
                 align-items: baseline;
                 gap: 10px;
+
+                @media #{$screen-mobile}{
+                    font-size: $text-font-size-small;
+                }
 
                 .rating{
                     font-weight: $font-weight-large;
@@ -52,14 +68,21 @@
                 gap: 10px;
     
                 .wathFilm{
-                    @include button;
-    
-                    background: $accent-gradient;
+                    @include button(true);
                 }
     
                 .wathTrailer{
                     @include button;
                 }
+
+                .wathFilm,
+                .wathTrailer{
+                    @media #{$screen-mobile}{
+                        padding: 10px;
+                    }
+                }
+
+                
             }
         }
 }

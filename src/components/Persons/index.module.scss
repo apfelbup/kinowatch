@@ -21,6 +21,10 @@
             transition: all $transition-duration-fast;
 
             border-bottom: 1px solid transparent;
+
+            @media #{$screen-mobile}{
+                font-size: $text-font-size-small;
+                }
         
             &:hover{
                 color: $light;
@@ -29,7 +33,7 @@
             }
         
             &:active{
-                opacity: 0.7;
+                opacity: 0.7; 
             }
         }
 
@@ -40,6 +44,11 @@
             overflow: hidden;
 
             border-radius: 100%;
+
+            @media #{$screen-mobile}{
+                width: 100px;
+                height: 100px;
+                }
 
             img{
                 display: block;

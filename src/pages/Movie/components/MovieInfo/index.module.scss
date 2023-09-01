@@ -4,19 +4,35 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @media #{$screen-tablet}{
+            gap: 20px;
+        }
     
     h4{
         font-size: $text-font-size-large;
         line-height: 20px;
         margin-bottom: 20px;
+        margin-top: 0;
+
+        @media #{$screen-mobile}{
+            font-size: $text-font-size-medium;
+            margin-bottom: 10px;
+            }
     }
 
     .description{
-        font-size: $text-font-size-medium;
-        max-width: 50vw;
+        max-width: 800px;
 
         p{
+            font-size: $text-font-size-medium;
             line-height: 28px;
+            margin: 0;
+
+            @media #{$screen-mobile}{
+                font-size: $text-font-size-small;
+                line-height: normal;
+                }
         }
     }
 }

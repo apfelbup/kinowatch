@@ -1,0 +1,43 @@
+@import "../../styles/styles.scss";
+
+.popup{
+    @include popup;
+
+    .trailer{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+
+        .close{
+            @include button;
+
+            position: absolute;
+            right: -50px;
+            top: -50px;
+
+            font-size: 20px;
+
+        }
+
+        .notfound{
+            font-size: $text-font-size-large;
+            font-weight: $font-weight-large;
+    
+            color: $light;
+        }
+
+        .iframe{
+            width: 70vw;
+            height: 70vh; 
+
+            @media #{$screen-tablet}{
+                height: 50vh;
+            }
+
+            @media #{$screen-mobile}{
+                height: 30vh;
+            }
+        }
+    }
+}
