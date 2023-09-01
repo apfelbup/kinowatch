@@ -1,0 +1,33 @@
+@import "../../styles/styles.scss";
+
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+    button{
+        @include button;
+
+        font-weight: $font-weight-medium;
+        font-size: $text-font-size-large;
+        color: $light;
+
+        padding: 0px 8px;
+    }
+
+    .step{
+        @include button(true);
+
+        padding: 8px;
+
+        &:disabled{
+            background: $grey;
+
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
