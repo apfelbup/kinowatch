@@ -15,7 +15,7 @@ const Carousel = ({children}) => {
         <section className={styles.carousel}>
       <Swiper
         slidesPerView="auto"
-        spaceBetween={30}
+        spaceBetween={20}
         freeMode={true}
         pagination={false}
         modules={[FreeMode]}

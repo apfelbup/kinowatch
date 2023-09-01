@@ -1,4 +1,6 @@
 @import "../../../styles/styles.scss";
 
 
-.swiper-backface-hidden .swiper-slide  { max-width: 250px; height: 400px; }
+.swiper-backface-hidden .swiper-slide  {height: 400px;}
+
+.swiper-slide  {width: min-content;}

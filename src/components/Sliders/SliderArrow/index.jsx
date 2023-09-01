@@ -11,7 +11,7 @@ import { useRef } from 'react';
 
 
 
-const Slider = ({children}) => { 
+const Slider = ({children, limit='auto', loop=false, speed=400}) => { 
 
 
   const navPrevRef = useRef(null);
@@ -40,12 +40,13 @@ const Slider = ({children}) => {
           <button className='swiper-prev' ref={navPrevRef}> <AiOutlineLeft/> </button>
           <button className='swiper-next' ref={navNextRef}> <AiOutlineRight/> </button>
           <Swiper
-        slidesPerView='auto'
+        slidesPerView={limit}
+        loop={loop}
+        speed = {speed}
         spaceBetween={30}
         onSwiper={onSwiper}
         navigation={navigation}
         modules={[Navigation]}
-        className={styles.swiper}
       >
         {children}
       </Swiper>

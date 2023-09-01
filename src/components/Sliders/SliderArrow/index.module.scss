@@ -17,7 +17,6 @@
 
   .slide {
     height: auto;
-    /* Center slide text vertically */
     align-items: stretch;
   }
   
@@ -25,9 +24,7 @@
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: red;
   
-    /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
