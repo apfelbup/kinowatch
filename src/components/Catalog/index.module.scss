@@ -4,4 +4,8 @@
     font-size: $title-font-size-medium;
     margin-bottom: 20px;
     padding: 0 40px;
+
+    @media #{$screen-tablet}{
+        font-size: $title-font-size-small;
+    }
 }

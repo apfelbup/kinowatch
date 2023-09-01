@@ -1,7 +1,15 @@
+@import "../../styles/styles.scss";
+
 
 
 .home{
     display: flex;
     flex-direction: column;
     gap: 50px;
+
+    margin-bottom: 80px;
+
+    .centered{
+        padding: 0 40px;
+    }
 }
