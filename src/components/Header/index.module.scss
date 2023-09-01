@@ -5,10 +5,14 @@
     top: 0;
     z-index: $z-index-big;
 
-    padding: 10px 0;
+    padding: 10px 0; 
 
 
     backdrop-filter: blur(70px);
+
+    @media #{$screen-tablet}{
+        padding: 5px 0;
+    }
 
     .wrapper{
         @include wrapper;
@@ -22,15 +26,22 @@
         display: flex;
         gap: 40px;
         align-items: flex-start;
-        
-        .links{
-            display: flex;
-            gap: 20px;
 
-            a{
-                @include link;
+        @media #{$screen-desktop}{
+            gap: 20px;
+            align-items: center;
+        }
+
+        .logo{
+            width: 200px;
+            height: auto;
+
+            @media #{$screen-desktop}{
+                width: 150px;
+                height: auto;
             }
         }
+        
     }
 
 }
