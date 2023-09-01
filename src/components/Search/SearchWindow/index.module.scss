@@ -1,0 +1,90 @@
+@import "../../../styles/styles.scss";
+
+
+
+
+.searchWindow{
+        @include popup;
+
+        ::-webkit-scrollbar {
+                width: 15px;
+                background: transparent;
+        }
+        
+        ::-webkit-scrollbar-track {
+                border: 10px solid rgba(0, 0, 0, 0);
+                border-radius: 20px;
+        
+                background: rgba($light, .1);
+                background-clip: padding-box;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+                border: 4px solid rgba(0, 0, 0, 0);
+                border-radius: 20px;
+        
+                background: $light;
+                background-clip: padding-box;
+        }
+
+        .searchBlock{
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+
+                display: flex;
+                flex-direction: column;
+
+                width: 700px;
+
+                @media #{$screen-desktop}{
+                        width: 70vw;
+                }
+
+
+                .close{
+                        @include button;
+        
+                        position: absolute;
+                        right: -100px;
+                        top: -10%;
+        
+                        font-size: 20px;
+
+                        
+                @media #{$screen-tablet}{
+                        right: -30px;
+                        top: -10%;
+                }
+                }
+
+                .form{
+                        display: flex;
+                        flex-direction: column;
+
+                .title{
+                        font-size: $font-size-xl;
+                        font-weight: $font-weight-large;
+
+                        margin-bottom: 20px;
+
+                        padding: 0;
+
+                        @media #{$screen-tablet}{
+                                font-size: $font-size-m;
+                        }
+                }
+
+                .inputForm{
+
+                        .input{
+                                @include input;
+        
+                                margin-bottom: 20px;
+                        }
+                }
+        }
+
+        }
+}

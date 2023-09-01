@@ -1,0 +1,8 @@
+@import "../../styles/styles.scss";
+
+
+.search{
+        @include button;
+
+        font-size: $font-size-xl;
+}

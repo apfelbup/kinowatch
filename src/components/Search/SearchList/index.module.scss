@@ -1,0 +1,41 @@
+@import "../../../styles/styles.scss";
+
+::-webkit-scrollbar {
+        width: rem(15px);
+    }
+    
+    ::-webkit-scrollbar-track {
+        border: rem(6px) solid rgba(0, 0, 0, 0);
+        border-radius: rem(20px);
+
+        background: rgba($light, .1);
+        background-clip: padding-box;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border: rem(5px) solid rgba(0, 0, 0, 0);
+        border-radius: rem(20px);
+
+        background: $light;
+        background-clip: padding-box;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        border: rem(5px) solid rgba(0, 0, 0, 0);
+
+        background: $light;
+        background-clip: padding-box;
+    }
+
+.searchList{
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        max-height: 80vh;
+        overflow-y: auto;
+
+        width: 100%;
+
+
+        }
