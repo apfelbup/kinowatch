@@ -1,0 +1,30 @@
+@import "../../styles/styles.scss";
+
+.header{
+    .title{
+        font-weight: $font-weight-large;
+        font-size: $title-font-size-large;
+        color: $light;
+
+        margin-bottom: 10px;
+
+        @media #{$screen-tablet}{
+            font-size: $title-font-size-medium;
+        }
+
+        @media #{$screen-mobile}{
+            font-size: $title-font-size-small;
+        }
+    }
+
+    .filters{
+        display: flex;
+        gap: 10px;
+
+        margin-bottom: 50px;
+
+        @media #{$screen-mobile}{
+            flex-direction: column;
+        }
+    }
+}

@@ -1,18 +1,16 @@
 import styles from "./index.module.scss";
-import FilmList from "../../components/FilmsList";
-import Loading from "../../components/UI/Loading";
-import { useGetCartoonsQuery} from "../../services/streamberryAPI";
+
+import FilmsSection from "../../components/FilmsSection";
 
 
 
 
 const Cartoons = () => {
-    const {data, isFetching} = useGetCartoonsQuery(10);
 
-    if(isFetching) return (<Loading/>)
+
     return(
-        <section>
-            <FilmList data={data.docs}/>
+        <section className={styles.cartoons}>
+            <FilmsSection title="Мультфильмы" type={3}/>
         </section>
     )
 }
