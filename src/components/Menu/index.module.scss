@@ -1,0 +1,65 @@
+@import "../../styles/styles.scss";
+
+
+    .menu{
+
+        .links{
+            display: flex;
+            gap: 20px;
+
+            @media #{$screen-desktop}{
+                gap: 10px;
+            }
+
+            a{
+                @include link;
+
+                @media #{$screen-desktop}{
+                    font-size: $text-font-size-medium;
+                }
+            }
+        }
+
+    }
+
+    .mobileMenu{
+        position: absolute;
+        right: 80px;
+
+        .menuBlock,
+        .menuActive{
+            position: absolute;
+            right: 0;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            text-align: end;
+
+            @media #{$screen-desktop}{
+                gap: 10px;
+            }
+
+            a{
+                @include link;
+
+                @media #{$screen-desktop}{
+                    font-size: $text-font-size-medium;
+                }
+            }
+        }
+
+        .menuBlock{
+            display: none;
+        }
+
+        .menuBtn {
+            @include button;
+
+            font-size: 28px;
+
+            padding: 0;
+        }
+
+    }
