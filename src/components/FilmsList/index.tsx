@@ -3,15 +3,18 @@ import FilmItem from '../FilmItem';
 import { filmData } from '../../utils/interfaces/data';
 
 
+interface IFilmList {
+    data:filmData[] | undefined
+}
 
-const FilmList = (data:any) => {
+const FilmList = ({data}:IFilmList) => { 
 
-    console.log(data);
 
     return (
         <ul className={styles.filmList}>
-            {data?.data.map((item:filmData) => (
+            {data?.map((item:filmData) => (
                 <FilmItem
+                    slider={false}
                     key={item.id}
                     item={item}
                 />

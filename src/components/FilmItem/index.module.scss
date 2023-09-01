@@ -1,52 +1,42 @@
 @import "../../styles/styles.scss";
 
 
-.filmItem{
-    position: relative;
+.activeFilm{
+    margin-bottom: 80vh;
+
+    @media #{$screen-desktop}{
+        margin-bottom: 65vh;
+    }
+
+    @media #{$screen-tablet}{
+        margin-bottom: 430px
+    }
 }
+
+.previewBox{
+    position: absolute;
+    left: 0%;
+    width: 100vw;
+}
+
 
 .container{
     border-radius: $border-radius-medium;
     overflow: hidden;
 
-    width: 250px;
+    width: 260px;
     height: 400px;
 
-    .imgContainer{
-        position: relative;
-        height: 100%;
-        cursor: pointer;
-
-        img{
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        &::before {
-            position: absolute;
-            display: block;
-            content: '';
-
-            opacity: 0;
-
-            transition: opacity $transition-duration-fast;
-
-            height: 100%;
-            width: 100%;
-            background-color: $dark-color;
-        }
-
-        &:hover{
-
-            &::before {
-                opacity: 0.5;
-            }
-        }
-
+    @media #{$screen-tablet}{
+        width: 240px;
     }
 
+    @media #{$screen-mobile}{
+        width: 140px;
+        height: 220px;
+    }
+    
+    .imgContainer,
     .imgContainerActive{
         position: relative;
         height: 100%;
@@ -58,7 +48,7 @@
             height: 100%;
             object-fit: cover;
         }
-        
+
         &::before {
             position: absolute;
             display: block;
@@ -71,6 +61,28 @@
             height: 100%;
             width: 100%;
             background-color: $dark-color;
+        }
+    }
+    
+
+    .imgContainer{
+        &::before {
+            opacity: 0;
+
+        }
+
+        &:hover{
+
+            &::before {
+                opacity: 0.5;
+            }
+        }
+
+    }
+
+    .imgContainerActive{
+        &::before {
+            opacity: 0.9;
         }
 
     }
