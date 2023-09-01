@@ -1,0 +1,15 @@
+@import "../../../styles/styles.scss";
+
+
+    .genre{
+        a{
+            @include button;
+            padding: 10px;
+            border: 1px solid $light;
+
+            @media #{$screen-tablet}{
+                font-size: $text-font-size-small;
+                padding: 5px;
+            }
+        }
+    }

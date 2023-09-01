@@ -4,18 +4,21 @@ import { rating } from '../../utils/interfaces/data';
 
 
 
+interface IRating {
+    rating:rating
+}
 
-const Rating = (rating:rating|any) => {
+const Rating = ({rating}:IRating) => {
 
-    const item = rating.imdb !== 0 ? rating.imdb : Math.round(rating.kp);
+    const ratings = rating.imdb !== 0 ? rating.imdb : Math.round(rating.kp);
 
-    const color = convertRatingColor(item);
+    const color = convertRatingColor(ratings);
 
     return (
         <>
-            {rating && 
+            {ratings && 
                 <span className={styles.rating} style={{backgroundColor:color}}>
-                    {item}
+                    {ratings}
                 </span>
             }
         </>

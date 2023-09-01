@@ -1,0 +1,89 @@
+@import "../../styles/styles.scss";
+
+
+
+.filmInfoContent{
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    width: 100%;
+
+    @media #{$screen-mobile}{
+        gap: 10px;
+    }
+
+
+    .logo{
+        font-weight: $font-weight-large;
+        font-size: $font-size-xxl;
+
+        width:fit-content;
+        max-width: 40%;
+        max-height: 250px;
+
+        color: $light;
+
+        @media #{$screen-mobile}{
+            max-width: 40%;
+            max-height: 100px;
+        }
+    }
+
+    .details{
+        font-weight: $font-weight-large;
+        display: flex;
+        align-items:baseline;
+        gap: 10px;
+
+        .year{
+            color: $grey;
+        }
+    }
+
+    .description{
+        font-size: $text-font-size-large;
+        line-height: 28px;
+
+        word-wrap: break-word;
+        -webkit-text-stroke: $accent-color;
+
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        line-clamp: 4;
+        -webkit-box-orient: vertical;
+
+        @media #{$screen-desktop}{
+            font-size: $text-font-size-medium;
+            line-height: normal;
+        }
+
+        @media #{$screen-tablet}{
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+
+            margin: 0;
+        }
+
+        @media #{$screen-mobile}{
+            font-size: $text-font-size-small;
+        }
+    }
+
+    .wathLink{
+        @include button(true);
+    
+        font-size: $text-font-size-large;
+
+        @media #{$screen-tablet}{
+            font-size: $text-font-size-small;
+        }
+
+        @media #{$screen-mobile}{
+            padding: 10px;
+        }
+    }
+    
+}

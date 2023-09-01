@@ -1,15 +1,18 @@
 import styles from './index.module.scss';
-import { Link } from 'react-router-dom';
 import { genres } from '../../utils/interfaces/data';
+import Genre from './Genre';
 
 
 
+interface IGenres {
+    genres:genres[]
+}
 
-const Genres = ({genres}:any) => {
+const Genres = ({genres}:IGenres) => {
     return (
         <ul className={styles.genres}>
             {genres?.map((item:genres) => (
-                <li key={item.name}><Link to="/">{item.name}</Link></li>
+                <Genre genre={item}/>
             ))}
         </ul>
     )

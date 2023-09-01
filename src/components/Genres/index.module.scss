@@ -7,11 +7,8 @@
     margin: 0;
     padding: 0;
 
-    li{
-        a{
-            @include button;
-            padding: 10px;
-            border: 1px solid $light;
-        }
+    @media #{$screen-tablet}{
+        max-width: 90%;
+        flex-wrap: wrap;
     }
 }

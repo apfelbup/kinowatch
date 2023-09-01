@@ -22,14 +22,55 @@
     
         width: 100%;
         height: 75vh;
+
+        @media #{$screen-desktop}{
+            height: 60vh;
+        }
+    
+        @media #{$screen-tablet}{
+            height: 400px
+        }
 }
-.accordion{
+.filmInfo{
     transition: all 0.3s;
     position: relative;
     bottom: -30px;
 
     width: 100%;
     height: 75vh;
+
+    @media #{$screen-desktop}{
+        height: 60vh;
+    }
+
+    @media #{$screen-tablet}{
+        height: 400px
+    }
+
+}
+
+
+.info{
+    position: absolute;
+    z-index: $z-index-medium;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    width: 45%;
+    padding: 20px 40px;
+
+    @media #{$screen-desktop}{
+        width: 60%;
+
+        padding: 10px 20px; 
+    }
+
+    @media #{$screen-mobile}{
+        width: 87%;
+    }
 }
 
 .close{
@@ -37,7 +78,7 @@
 
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 20px;
     z-index: 20;
 
     padding: 5px 5px 0px 5px;
@@ -53,67 +94,40 @@
     &:hover{
         opacity: 0.7;
     }
+
+    @media #{$screen-tablet}{
+        font-size: $title-font-size-medium;
+    }
 }
 
-.accordionContent{
-    position: absolute;
-    z-index: $z-index-small;
-    top: 0;
+.imgContainer{
+    position: relative;
+    width: 70%;
+    height: 100%;
+    margin-left:  auto;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
 
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    
-    width: 45%;
-    padding: 0 40px;
-
-    .logo{
-        font-weight: $font-weight-large;
-        font-size: $font-size-xxl;
-
-        width: 50%;
-
-        color: $light;
+    @media #{$screen-desktop}{
+        width: 90%;
     }
 
-    .details{
-        font-weight: $font-weight-large;
-        display: flex;
-        align-items:baseline;
-        gap: 10px;
+    @media #{$screen-tablet}{
+        width: 100%;
 
-        .year{
-            color: $grey;
+        &::before {
+            position: absolute;
+            z-index: 10;
+            display: block;
+            content: '';
+    
+            opacity: 0.3;
+    
+            transition: opacity $transition-duration-fast;
+    
+            height: 100%;
+            width: 100%;
+            background-color: $dark-color;
         }
     }
 
-    .description{
-        font-size: $text-font-size-large;
-        line-height: 28px;
-
-        word-wrap: break-word;
-
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 5;
-        line-clamp: 5;
-        -webkit-box-orient: vertical;
-    }
-
-    .wathLink{
-        @include button;
-    
-        font-size: $text-font-size-large;
-    
-        background: $accent-gradient;
-    }
-    
-}
-
-
-
-.imgContainer{
-    width: 50%;
-    height: 100%;
-    margin-left:  auto;
 }
