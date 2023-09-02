@@ -24,7 +24,7 @@
 
 
 ## Демо
-**[Ссылка на лайв-демо](https://64f19561c5bb2e384290f6e6--rainbow-fudge-a1386f.netlify.app/)**
+**[Ссылка на лайв-демо](https://64f2f990d2209b5a45574b4b--stellular-muffin-0d8b8a.netlify.app/)**
 
 Главная страница
 ![image](https://github.com/apfelbup/streamberry/assets/102802834/5b95c6a4-629e-4a69-9aa2-8e50d9fa50f6)
